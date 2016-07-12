@@ -29,6 +29,12 @@
 		A904C2BF1D34BDAE00EAE86D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A904C2891D349D7D00EAE86D /* Main.storyboard */; };
 		A9C4E4CC1D34F3A20036CD6F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4E4C31D34F38A0036CD6F /* Alamofire.framework */; };
 		A9C4E4CD1D34F3A20036CD6F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4E4C31D34F38A0036CD6F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9C4E57D1D34F4ED0036CD6F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4E4C31D34F38A0036CD6F /* Alamofire.framework */; };
+		A9C4E57E1D34F4ED0036CD6F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4E4C31D34F38A0036CD6F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9C4E5811D34F5030036CD6F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4E4C31D34F38A0036CD6F /* Alamofire.framework */; };
+		A9C4E5821D34F5030036CD6F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4E4C31D34F38A0036CD6F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9C4E5851D34F5090036CD6F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4E4C31D34F38A0036CD6F /* Alamofire.framework */; };
+		A9C4E5861D34F5090036CD6F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4E4C31D34F38A0036CD6F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +80,27 @@
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
+		A9C4E57F1D34F4ED0036CD6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9C4E4BA1D34F38A0036CD6F /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		A9C4E5831D34F5030036CD6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9C4E4BA1D34F38A0036CD6F /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		A9C4E5871D34F5090036CD6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9C4E4BA1D34F38A0036CD6F /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,6 +121,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A9C4E57E1D34F4ED0036CD6F /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +132,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A9C4E5821D34F5030036CD6F /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +143,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A9C4E5861D34F5090036CD6F /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C4E57D1D34F4ED0036CD6F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C4E5811D34F5030036CD6F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C4E5851D34F5090036CD6F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +227,7 @@
 		A904C2841D349D7D00EAE86D /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				A9C4E4D01D34F4BD0036CD6F /* 3rd */,
 				A904C2B41D34BCA800EAE86D /* Tools */,
 				A904C2851D349D7D00EAE86D /* AppDelegate.swift */,
 				A904C2871D349D7D00EAE86D /* ViewController.swift */,
@@ -236,6 +270,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A9C4E4D01D34F4BD0036CD6F /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 3rd;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,6 +311,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A9C4E5801D34F4ED0036CD6F /* PBXTargetDependency */,
 			);
 			name = Template_UAT;
 			productName = Template;
@@ -288,6 +330,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A9C4E5841D34F5030036CD6F /* PBXTargetDependency */,
 			);
 			name = Template_QA;
 			productName = Template;
@@ -306,6 +349,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A9C4E5881D34F5090036CD6F /* PBXTargetDependency */,
 			);
 			name = Template_DEV;
 			productName = Template;
@@ -479,6 +523,21 @@
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
 			targetProxy = A9C4E4CE1D34F3A20036CD6F /* PBXContainerItemProxy */;
+		};
+		A9C4E5801D34F4ED0036CD6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = A9C4E57F1D34F4ED0036CD6F /* PBXContainerItemProxy */;
+		};
+		A9C4E5841D34F5030036CD6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = A9C4E5831D34F5030036CD6F /* PBXContainerItemProxy */;
+		};
+		A9C4E5881D34F5090036CD6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = A9C4E5871D34F5090036CD6F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
