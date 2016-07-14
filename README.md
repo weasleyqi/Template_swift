@@ -16,9 +16,11 @@
 	- UAT : 客户验收测试
 	- Pro : 正式环境发布
 - Alamofire ：V3.0.0 (swift网络请求库)
-	- ` XCode7.0+`
-	- `iOS 8.0+`
-	
+	- XCode7.0+
+	- iOS 8.0+
+- Kingfisher : V2.1.0 (swift图片库)
+	- Xcode7.0+
+	- iOS 8.0+
 
 
 ##Multi-Target
@@ -30,7 +32,7 @@
 
 >建议在项目开始的时候向iOS证书管理员申请多套证书，在target中配置好各个证书，然后在constant中配置好各个项目的配置项，在scheme中添加多个scheme，这样就会减少每次修改bundleid和修改证书带来的风险。
 
-##Alamofire
+##Alamofire V3.0.0
 ###导入过程（使用模版的项目忽略此过程）
 - 下载Alamofire代码包
 - 将Alamofire文件夹copy到项目目录中
@@ -84,3 +86,25 @@ Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
 > Rather than blocking execution to wait for a response from the server, a [callback](http://en.wikipedia.org/wiki/Callback_%28computer_programming%29) is specified to handle the response once it's received. The result of a request is only available inside the scope of a response handler. Any execution contingent on the response or data received from the server must be done within a handler.
 
 ######[More information see origin Documents](https://github.com/Alamofire/Alamofire/blob/3.0.0/README.md)
+
+##Kingfinsher V2.1.0
+###导入过程（使用模版的项目忽略此过程）
+- 下载Kingfisher代码包
+- 将Kingfisher文件夹copy到项目目录中
+- 拖动Project文件至项目的Project文件下
+- 选择某个target，general，在embedded Binaries添加Kingfisher.framework文件
+- `完成上述步骤，编译项目，确保项目编译成功。`
+
+###Usage
+
+```swift
+import Kingfisher
+
+imageView.kf_setImageWithURL(NSURL(string: "http://your_image_url.png")!)
+
+```
+
+```swift
+imageView.kf_setImageWithURL(NSURL(string: "http://your_image_url.png")!, placeholderImage: nil)
+```
+######[More information see origin Documents](https://github.com/onevcat/Kingfisher/tree/2.1.0)
