@@ -9,9 +9,13 @@
 #ifndef Constant_h
 #define Constant_h
 
-#ifdef Template_UAT
+#ifdef Template_DEV //开发环境
 
-#elif Template
+#elif Template_QA //QA环境
+
+#elif Template_UAT //UAT环境
+
+#elif Template //正式环境
 
 #endif
 
