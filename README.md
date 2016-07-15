@@ -21,6 +21,9 @@
 - Kingfisher : V2.1.0 (swift图片库)
 	- Xcode7.0+
 	- iOS 8.0+
+- Remote Push Notifications
+	- XCode7.0+
+	- iOS 8.0+
 
 
 ##Multi-Target
@@ -108,3 +111,12 @@ imageView.kf_setImageWithURL(NSURL(string: "http://your_image_url.png")!)
 imageView.kf_setImageWithURL(NSURL(string: "http://your_image_url.png")!, placeholderImage: nil)
 ```
 ######[More information see origin Documents](https://github.com/onevcat/Kingfisher/tree/2.1.0)
+##Remote Push Notifications
+```swift
+//iOS 8+ 注册推送
+        let notificationTypes: UIUserNotificationType = 	[UIUserNotificationType.Alert, UIUserNotificationType.Badge, 	UIUserNotificationType.Sound]
+        let pushNotificationSettings = UIUserNotificationSettings(forTypes: 	notificationTypes, categories: nil)
+        application.registerUserNotificationSettings(pushNotificationSettings)
+        application.registerForRemoteNotifications()
+```
+>In didRegisterForRemoteNotificationsWithDeviceToken function,get devicetoken,in didFailToRegisterForRemoteNotificationsWithError function, get register error message, in didReceiveRemoteNotification function, handle received messages.
