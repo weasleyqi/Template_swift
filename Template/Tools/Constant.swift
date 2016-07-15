@@ -31,8 +31,8 @@ let screenHeight = UIScreen.mainScreen().bounds.size.height
 let mainVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"]
 /// app build version
 let buildVersion = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"]
-/// app display name
-let appDisplayName = NSBundle.mainBundle().infoDictionary!["CFBundleDisplayName"]
+/// device name
+let appDisplayName = UIDevice.currentDevice().name
 /// iOS系统版本
 let iosVersion : NSString = UIDevice.currentDevice().systemVersion
 /// 设备udid
