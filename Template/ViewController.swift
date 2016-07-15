@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         testImage.kf_setImageWithURL(NSURL(string: "http://pic29.nipic.com/20130512/12428836_110546647149_2.jpg")!, placeholderImage: UIImage(named: "1.jpg"))
+        
+        MTLog("Test MTLog")
     }
 
     override func didReceiveMemoryWarning() {
