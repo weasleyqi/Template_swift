@@ -44,6 +44,10 @@
 		A9C4E5D81D3784020036CD6F /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4E5B51D3783C50036CD6F /* Kingfisher.framework */; };
 		A9C4E5D91D3784020036CD6F /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4E5B51D3783C50036CD6F /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9C4E5DD1D3787BD0036CD6F /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9C4E5DC1D3787BD0036CD6F /* 1.jpg */; };
+		A9F7CF491D38874200E24255 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7CF481D38874200E24255 /* Constant.swift */; };
+		A9F7CF4A1D38874200E24255 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7CF481D38874200E24255 /* Constant.swift */; };
+		A9F7CF4B1D38874200E24255 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7CF481D38874200E24255 /* Constant.swift */; };
+		A9F7CF4C1D38874200E24255 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7CF481D38874200E24255 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,12 +291,12 @@
 		A904C2A41D34BB5300EAE86D /* Template_UAT-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Template_UAT-Info.plist"; path = "/Users/weasleyqi/Documents/WorkFolder/Template_swift/Template_UAT-Info.plist"; sourceTree = "<absolute>"; };
 		A904C2B21D34BC8B00EAE86D /* Template_QA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template_QA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A904C2B31D34BC8B00EAE86D /* Template_QA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Template_QA-Info.plist"; path = "/Users/weasleyqi/Documents/WorkFolder/Template_swift/Template_QA-Info.plist"; sourceTree = "<absolute>"; };
-		A904C2B51D34BCA800EAE86D /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		A904C2C31D34BDAE00EAE86D /* Template_DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template_DEV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A904C2C41D34BDAF00EAE86D /* Template_DEV-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Template_DEV-Info.plist"; path = "/Users/weasleyqi/Documents/WorkFolder/Template_swift/Template_DEV-Info.plist"; sourceTree = "<absolute>"; };
 		A9C4E4BA1D34F38A0036CD6F /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Template/3rd/Alamofire-3.0.0/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		A9C4E5A51D3783C50036CD6F /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = "Template/3rd/Kingfisher-2.1.0/Kingfisher.xcodeproj"; sourceTree = "<group>"; };
 		A9C4E5DC1D3787BD0036CD6F /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		A9F7CF481D38874200E24255 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,7 +375,8 @@
 		A904C2B41D34BCA800EAE86D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				A904C2B51D34BCA800EAE86D /* Constant.h */,
+				A9F7CF461D387CBD00E24255 /* Category */,
+				A9F7CF481D38874200E24255 /* Constant.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -427,6 +432,13 @@
 				A9C4E5CB1D3783C50036CD6F /* KingfisherTests-OSX.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A9F7CF461D387CBD00E24255 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -731,6 +743,7 @@
 			files = (
 				A904C2881D349D7D00EAE86D /* ViewController.swift in Sources */,
 				A904C2861D349D7D00EAE86D /* AppDelegate.swift in Sources */,
+				A9F7CF491D38874200E24255 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,6 +753,7 @@
 			files = (
 				A904C2991D34BB5300EAE86D /* ViewController.swift in Sources */,
 				A904C29A1D34BB5300EAE86D /* AppDelegate.swift in Sources */,
+				A9F7CF4A1D38874200E24255 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +763,7 @@
 			files = (
 				A904C2A81D34BC8B00EAE86D /* ViewController.swift in Sources */,
 				A904C2A91D34BC8B00EAE86D /* AppDelegate.swift in Sources */,
+				A9F7CF4B1D38874200E24255 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,6 +773,7 @@
 			files = (
 				A904C2B91D34BDAE00EAE86D /* ViewController.swift in Sources */,
 				A904C2BA1D34BDAE00EAE86D /* AppDelegate.swift in Sources */,
+				A9F7CF4C1D38874200E24255 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,9 +930,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
 				INFOPLIST_FILE = Template/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D PRODUCTION_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -927,9 +946,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
 				INFOPLIST_FILE = Template/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D PRODUCTION_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -940,9 +962,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
 				INFOPLIST_FILE = "Template_UAT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D UAT_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -953,9 +978,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
 				INFOPLIST_FILE = "Template_UAT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D UAT_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -966,9 +994,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
 				INFOPLIST_FILE = "Template_QA-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D QA_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -979,9 +1010,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
 				INFOPLIST_FILE = "Template_QA-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D QA_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -992,9 +1026,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
 				INFOPLIST_FILE = "Template_DEV-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEV_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1005,9 +1042,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
 				INFOPLIST_FILE = "Template_DEV-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEV_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
