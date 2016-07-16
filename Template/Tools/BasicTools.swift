@@ -43,3 +43,33 @@ func convertNullStringToEmpty(nullString:String?) ->String {
     }
     return str!
 }
+
+/**
+ Base64 加密
+ 
+ - parameter str: 需要加密的字符串
+ 
+ - returns: 加密后的字符串
+ */
+func base64EnCode(str:String) -> String {
+    let plainData = str.dataUsingEncoding(NSUTF8StringEncoding)
+    
+    let base64String = plainData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.init(rawValue: 0))
+    
+    return base64String!
+}
+
+/**
+ Base64揭秘
+ 
+ - parameter base64EncodedString: base64加密后的字符串
+ 
+ - returns: base64解密后的字符串
+ */
+func base64DeCode(base64EncodedString:String) -> String {
+    let decodedData = NSData(base64EncodedString: base64EncodedString, options:NSDataBase64DecodingOptions.init(rawValue: 0))
+    
+    let decodedString = String(data: decodedData!, encoding: NSUTF8StringEncoding)
+    
+    return decodedString!
+}
