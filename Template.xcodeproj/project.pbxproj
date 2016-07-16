@@ -27,6 +27,10 @@
 		A904C2BD1D34BDAE00EAE86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A904C28E1D349D7D00EAE86D /* LaunchScreen.storyboard */; };
 		A904C2BE1D34BDAE00EAE86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A904C28C1D349D7D00EAE86D /* Assets.xcassets */; };
 		A904C2BF1D34BDAE00EAE86D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A904C2891D349D7D00EAE86D /* Main.storyboard */; };
+		A97A20561D3932AB00D802AB /* BasicTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A20551D3932AB00D802AB /* BasicTools.swift */; };
+		A97A20571D3932AB00D802AB /* BasicTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A20551D3932AB00D802AB /* BasicTools.swift */; };
+		A97A20581D3932AB00D802AB /* BasicTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A20551D3932AB00D802AB /* BasicTools.swift */; };
+		A97A20591D3932AB00D802AB /* BasicTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A20551D3932AB00D802AB /* BasicTools.swift */; };
 		A9C4E4CC1D34F3A20036CD6F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4E4C31D34F38A0036CD6F /* Alamofire.framework */; };
 		A9C4E4CD1D34F3A20036CD6F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4E4C31D34F38A0036CD6F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9C4E57D1D34F4ED0036CD6F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4E4C31D34F38A0036CD6F /* Alamofire.framework */; };
@@ -293,6 +297,7 @@
 		A904C2B31D34BC8B00EAE86D /* Template_QA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Template_QA-Info.plist"; path = "/Users/weasleyqi/Documents/WorkFolder/Template_swift/Template_QA-Info.plist"; sourceTree = "<absolute>"; };
 		A904C2C31D34BDAE00EAE86D /* Template_DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template_DEV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A904C2C41D34BDAF00EAE86D /* Template_DEV-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Template_DEV-Info.plist"; path = "/Users/weasleyqi/Documents/WorkFolder/Template_swift/Template_DEV-Info.plist"; sourceTree = "<absolute>"; };
+		A97A20551D3932AB00D802AB /* BasicTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTools.swift; sourceTree = "<group>"; };
 		A9C4E4BA1D34F38A0036CD6F /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Template/3rd/Alamofire-3.0.0/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		A9C4E5A51D3783C50036CD6F /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = "Template/3rd/Kingfisher-2.1.0/Kingfisher.xcodeproj"; sourceTree = "<group>"; };
 		A9C4E5DC1D3787BD0036CD6F /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
@@ -377,6 +382,7 @@
 			children = (
 				A9F7CF461D387CBD00E24255 /* Category */,
 				A9F7CF481D38874200E24255 /* Constant.swift */,
+				A97A20551D3932AB00D802AB /* BasicTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -743,6 +749,7 @@
 			files = (
 				A904C2881D349D7D00EAE86D /* ViewController.swift in Sources */,
 				A904C2861D349D7D00EAE86D /* AppDelegate.swift in Sources */,
+				A97A20561D3932AB00D802AB /* BasicTools.swift in Sources */,
 				A9F7CF491D38874200E24255 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,6 +760,7 @@
 			files = (
 				A904C2991D34BB5300EAE86D /* ViewController.swift in Sources */,
 				A904C29A1D34BB5300EAE86D /* AppDelegate.swift in Sources */,
+				A97A20571D3932AB00D802AB /* BasicTools.swift in Sources */,
 				A9F7CF4A1D38874200E24255 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,6 +771,7 @@
 			files = (
 				A904C2A81D34BC8B00EAE86D /* ViewController.swift in Sources */,
 				A904C2A91D34BC8B00EAE86D /* AppDelegate.swift in Sources */,
+				A97A20581D3932AB00D802AB /* BasicTools.swift in Sources */,
 				A9F7CF4B1D38874200E24255 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -773,6 +782,7 @@
 			files = (
 				A904C2B91D34BDAE00EAE86D /* ViewController.swift in Sources */,
 				A904C2BA1D34BDAE00EAE86D /* AppDelegate.swift in Sources */,
+				A97A20591D3932AB00D802AB /* BasicTools.swift in Sources */,
 				A9F7CF4C1D38874200E24255 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

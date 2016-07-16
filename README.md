@@ -114,9 +114,9 @@ imageView.kf_setImageWithURL(NSURL(string: "http://your_image_url.png")!, placeh
 ##Remote Push Notifications
 ```swift
 //iOS 8+ 注册推送
-        let notificationTypes: UIUserNotificationType = 	[UIUserNotificationType.Alert, UIUserNotificationType.Badge, 	UIUserNotificationType.Sound]
-        let pushNotificationSettings = UIUserNotificationSettings(forTypes: 	notificationTypes, categories: nil)
-        application.registerUserNotificationSettings(pushNotificationSettings)
-        application.registerForRemoteNotifications()
+let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
+let pushNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
+application.registerUserNotificationSettings(pushNotificationSettings)
+application.registerForRemoteNotifications()
 ```
 >In didRegisterForRemoteNotificationsWithDeviceToken function,get devicetoken,in didFailToRegisterForRemoteNotificationsWithError function, get register error message, in didReceiveRemoteNotification function, handle received messages.
