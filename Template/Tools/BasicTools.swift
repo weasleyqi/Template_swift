@@ -60,7 +60,7 @@ func base64EnCode(str:String) -> String {
 }
 
 /**
- Base64揭秘
+ Base64 解密
  
  - parameter base64EncodedString: base64加密后的字符串
  
@@ -72,4 +72,29 @@ func base64DeCode(base64EncodedString:String) -> String {
     let decodedString = String(data: decodedData!, encoding: NSUTF8StringEncoding)
     
     return decodedString!
+}
+
+/**
+ MD5 加密
+ 
+ - usage： var str ＝ orignString.md5()
+ 
+ - extension了字符串后就变成了字符串的一个自带方法
+ 
+ - returns: MD5加密后的字符串
+ */
+extension String{
+    func md5() ->String!{
+        let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
+        let strLen = CUnsignedInt(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        let digestLen = Int(CC_MD5_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLen)
+        CC_MD5(str!, strLen, result)
+        let hash = NSMutableString()
+        for i in 0 ..< digestLen {
+            hash.appendFormat("%02x", result[i])
+        }
+        result.destroy()
+        return String(format: hash as String)
+    }
 }

@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         testImage.kf_setImageWithURL(NSURL(string: "http://pic29.nipic.com/20130512/12428836_110546647149_2.jpg")!, placeholderImage: UIImage(named: "1.jpg"))
         
         MTLog("Test MTLog")
+        
+        var str = "test123"
+        var str_Md5 = str.md5()
+        MTLog(str_Md5)
     }
 
     override func didReceiveMemoryWarning() {

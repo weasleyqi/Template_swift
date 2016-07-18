@@ -298,6 +298,10 @@
 		A904C2C31D34BDAE00EAE86D /* Template_DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template_DEV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A904C2C41D34BDAF00EAE86D /* Template_DEV-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Template_DEV-Info.plist"; path = "/Users/weasleyqi/Documents/WorkFolder/Template_swift/Template_DEV-Info.plist"; sourceTree = "<absolute>"; };
 		A97A20551D3932AB00D802AB /* BasicTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTools.swift; sourceTree = "<group>"; };
+		A97A206E1D3CDB1E00D802AB /* Template-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Template-Bridging-Header.h"; path = "../Tools/Template-Bridging-Header.h"; sourceTree = "<group>"; };
+		A97A206F1D3CDB1E00D802AB /* Template_UAT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Template_UAT-Bridging-Header.h"; path = "../Tools/Template_UAT-Bridging-Header.h"; sourceTree = "<group>"; };
+		A97A20701D3CDB1F00D802AB /* Template_QA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Template_QA-Bridging-Header.h"; path = "../Tools/Template_QA-Bridging-Header.h"; sourceTree = "<group>"; };
+		A97A20711D3CDB1F00D802AB /* Template_DEV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Template_DEV-Bridging-Header.h"; path = "../Tools/Template_DEV-Bridging-Header.h"; sourceTree = "<group>"; };
 		A9C4E4BA1D34F38A0036CD6F /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Template/3rd/Alamofire-3.0.0/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		A9C4E5A51D3783C50036CD6F /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = "Template/3rd/Kingfisher-2.1.0/Kingfisher.xcodeproj"; sourceTree = "<group>"; };
 		A9C4E5DC1D3787BD0036CD6F /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
@@ -390,6 +394,7 @@
 		A904C2B61D34BD5300EAE86D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A97A20781D3CDB3800D802AB /* Bridging-header */,
 				A9C4E5DC1D3787BD0036CD6F /* 1.jpg */,
 				A904C2891D349D7D00EAE86D /* Main.storyboard */,
 				A904C28C1D349D7D00EAE86D /* Assets.xcassets */,
@@ -400,6 +405,17 @@
 				A904C2C41D34BDAF00EAE86D /* Template_DEV-Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A97A20781D3CDB3800D802AB /* Bridging-header */ = {
+			isa = PBXGroup;
+			children = (
+				A97A206E1D3CDB1E00D802AB /* Template-Bridging-Header.h */,
+				A97A206F1D3CDB1E00D802AB /* Template_UAT-Bridging-Header.h */,
+				A97A20701D3CDB1F00D802AB /* Template_QA-Bridging-Header.h */,
+				A97A20711D3CDB1F00D802AB /* Template_DEV-Bridging-Header.h */,
+			);
+			name = "Bridging-header";
 			sourceTree = "<group>";
 		};
 		A9C4E4BB1D34F38A0036CD6F /* Products */ = {
@@ -939,6 +955,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
@@ -948,6 +965,8 @@
 				OTHER_SWIFT_FLAGS = "-D PRODUCTION_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Template/Tools/Template-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -955,6 +974,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
@@ -964,6 +984,7 @@
 				OTHER_SWIFT_FLAGS = "-D PRODUCTION_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Template/Tools/Template-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -971,6 +992,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
@@ -980,6 +1002,8 @@
 				OTHER_SWIFT_FLAGS = "-D UAT_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Template/Tools/Template_UAT-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -987,6 +1011,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
@@ -996,6 +1021,7 @@
 				OTHER_SWIFT_FLAGS = "-D UAT_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Template/Tools/Template_UAT-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -1003,6 +1029,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
@@ -1012,6 +1039,8 @@
 				OTHER_SWIFT_FLAGS = "-D QA_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Template/Tools/Template_QA-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1019,6 +1048,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
@@ -1028,6 +1058,7 @@
 				OTHER_SWIFT_FLAGS = "-D QA_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Template/Tools/Template_QA-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -1035,6 +1066,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
@@ -1044,6 +1076,8 @@
 				OTHER_SWIFT_FLAGS = "-D DEV_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Template/Tools/Template_DEV-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1051,6 +1085,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Template/PrefixHeader.pch;
@@ -1060,6 +1095,7 @@
 				OTHER_SWIFT_FLAGS = "-D DEV_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movitech.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Template/Tools/Template_DEV-Bridging-Header.h";
 			};
 			name = Release;
 		};
