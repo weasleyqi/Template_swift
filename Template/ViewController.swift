@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         
         MTLog("Test MTLog")
         
-        var str = "test123"
-        var str_Md5 = str.md5()
+        let str = "test123"
+        let str_Md5 = str.md5()
         MTLog(str_Md5)
     }
 

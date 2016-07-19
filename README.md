@@ -1,6 +1,6 @@
 #Template_swift
 
-
+[![Build Status](https://travis-ci.org/weasleyqi/Template_swift.svg?branch=master)](https://travis-ci.org/weasleyqi/Template_swift)
 ##Release Note
 ---
 ##1.x Releases
