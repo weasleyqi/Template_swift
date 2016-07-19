@@ -5,6 +5,11 @@
 //  Created by Weasley Qi on 16/7/15.
 //  Copyright © 2016年 Weasley Qi. All rights reserved.
 //
+// 去除字符串两端的空格和回车
+// null字符串处理
+// Base64加密／解密
+// MD5加密
+// 手机号码校验
 
 import Foundation
 

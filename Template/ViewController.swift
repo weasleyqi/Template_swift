@@ -9,7 +9,6 @@
 import UIKit
 import Kingfisher
 
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var testImage: UIImageView!
@@ -24,6 +23,7 @@ class ViewController: UIViewController {
         let str = "test123"
         let str_Md5 = str.md5()
         MTLog(str_Md5)
+        
     }
 
     override func didReceiveMemoryWarning() {
