@@ -21,6 +21,9 @@ import UIKit
     let server = ""
 #elseif DEV_VERSION  //开发版本
     let server = ""
+    let downloadUrl = ""
+    let checkVersionUrl = ""
+    
 #endif
 
 /// 屏幕宽度
