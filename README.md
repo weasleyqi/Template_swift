@@ -124,13 +124,13 @@ application.registerForRemoteNotifications()
 ```
 >In didRegisterForRemoteNotificationsWithDeviceToken function,get devicetoken,in didFailToRegisterForRemoteNotificationsWithError function, get register error message, in didReceiveRemoteNotification function, handle received messages.
 
-//检查更新 checkForUpdate()
+##检查更新 checkForUpdate()
 1. assigning variables (checkVersionUrl) with a default value 
 2. assigning variables (downloadUrl) with a default value
 3. request for check server version
+```swift
 let request = NSURLRequest(URL: NSURL(string: checkVersionUrl)!)
 NSURLConnection.sendAsynchronousRequest(request, queue:NSOperationQueue.mainQueue()) { (response,data,connError) -> Void in
-...
 if let d = data{
 let jsonstring = NSString(data: d, encoding: NSUTF8StringEncoding)! as String
 dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -138,6 +138,7 @@ print("jsonstring==\(jsonstring)")
 let ver = "1.0"
 self.checkVersion(ver)
 })
+```
 4. get server version and this function calls the checkVersion() for download
 
 
