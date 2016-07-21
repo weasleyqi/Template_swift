@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings(pushNotificationSettings)
         application.registerForRemoteNotifications()
         
+        //检查更新
+        checkForUpdate()
+        
         return true
     }
 
@@ -64,5 +67,72 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         MTLog("userInfo==\(userInfo)")
     }
+    
+    //检查更新
+    func checkForUpdate(){
+        let request = NSURLRequest(URL: NSURL(string: checkVersionUrl)!)
+       
+        NSURLConnection.sendAsynchronousRequest(request, queue:NSOperationQueue.mainQueue()) { (response,data,connError) -> Void in
+            if(data!.length == 0 || connError != nil){
+                print("connError==\(connError!.localizedDescription)")
+            }else{
+                do {
+                    if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String:AnyObject] {
+                        print(json)
+                        
+                        if let d = data{
+                            let jsonstring = NSString(data: d, encoding: NSUTF8StringEncoding)! as String
+                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                print("jsonstring==\(jsonstring)")
+                                let ver = "1.0"
+                                self.checkVersion(ver)
+                            })
+                        }
+                    }
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    
+    func checkVersion(ver:String) -> Bool{
+        
+        let sandboxVersion = NSUserDefaults.standardUserDefaults().objectForKey("CFBundleShortVersionString") as? String ?? ""
+        let currentVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
+        
+        let version : String
+        if(ver.characters.count > 0){
+            version = ver
+        }else{
+            version = sandboxVersion
+        }
+        
+        if version.compare(currentVersion) == NSComparisonResult.OrderedDescending {
+            NSUserDefaults.standardUserDefaults().setObject(currentVersion, forKey: "CFBundleShortVersionString")
+            
+            let alertView = UIAlertView()
+            alertView.delegate=self
+            alertView.title = "Update"
+            alertView.message = "New version for update"
+            alertView.addButtonWithTitle("Cancel")
+            alertView.addButtonWithTitle("OK")
+            alertView.show()
+            
+            return true
+        }
+        
+        return false
+    }
+    
+    func alertView(alertView:UIAlertView, clickedButtonAtIndex buttonIndex: Int){
+        MTLog("buttonIndex==\(buttonIndex) , cancelButtonIndex==\(alertView.cancelButtonIndex)")
+        if(buttonIndex == 1){
+            UIApplication.sharedApplication().openURL(NSURL(string: downloadUrl)!)
+        }
+        else {}
+    }
+
 }
 
