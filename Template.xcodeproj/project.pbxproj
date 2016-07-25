@@ -27,7 +27,6 @@
 		A904C2BD1D34BDAE00EAE86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A904C28E1D349D7D00EAE86D /* LaunchScreen.storyboard */; };
 		A904C2BE1D34BDAE00EAE86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A904C28C1D349D7D00EAE86D /* Assets.xcassets */; };
 		A904C2BF1D34BDAE00EAE86D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A904C2891D349D7D00EAE86D /* Main.storyboard */; };
-		A954AF011D3E04CD00533861 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A954AF001D3E04CD00533861 /* Reachability.framework */; };
 		A97A20561D3932AB00D802AB /* BasicTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A20551D3932AB00D802AB /* BasicTools.swift */; };
 		A97A20571D3932AB00D802AB /* BasicTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A20551D3932AB00D802AB /* BasicTools.swift */; };
 		A97A20581D3932AB00D802AB /* BasicTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A20551D3932AB00D802AB /* BasicTools.swift */; };
@@ -302,7 +301,6 @@
 		A904C2B31D34BC8B00EAE86D /* Template_QA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Template_QA-Info.plist"; path = "/Users/weasleyqi/Documents/WorkFolder/Template_swift/Template_QA-Info.plist"; sourceTree = "<absolute>"; };
 		A904C2C31D34BDAE00EAE86D /* Template_DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template_DEV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A904C2C41D34BDAF00EAE86D /* Template_DEV-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Template_DEV-Info.plist"; path = "/Users/weasleyqi/Documents/WorkFolder/Template_swift/Template_DEV-Info.plist"; sourceTree = "<absolute>"; };
-		A954AF001D3E04CD00533861 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = /Users/weasleyqi/Documents/WorkFolder/Template_swift/Template/Tools/Reachability.framework; sourceTree = "<absolute>"; };
 		A97A20551D3932AB00D802AB /* BasicTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTools.swift; sourceTree = "<group>"; };
 		A97A206E1D3CDB1E00D802AB /* Template-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Template-Bridging-Header.h"; path = "../Tools/Template-Bridging-Header.h"; sourceTree = "<group>"; };
 		A97A206F1D3CDB1E00D802AB /* Template_UAT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Template_UAT-Bridging-Header.h"; path = "../Tools/Template_UAT-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -321,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9C4E5CC1D3783DD0036CD6F /* Kingfisher.framework in Frameworks */,
-				A954AF011D3E04CD00533861 /* Reachability.framework in Frameworks */,
 				A9C4E4CC1D34F3A20036CD6F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

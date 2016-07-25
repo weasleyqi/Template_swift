@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -70,47 +71,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //检查更新
     func checkForUpdate(){
-        let request = NSURLRequest(URL: NSURL(string: checkVersionUrl)!)
-       
-        NSURLConnection.sendAsynchronousRequest(request, queue:NSOperationQueue.mainQueue()) { (response,data,connError) -> Void in
-            if(data!.length == 0 || connError != nil){
-                MTLog("connError==\(connError!.localizedDescription)")
-            }else{
-                do {
-                    if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String:AnyObject] {
-                        MTLog(json)
-                        
-                        if let d = data{
-                            let jsonstring = NSString(data: d, encoding: NSUTF8StringEncoding)! as String
-                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                MTLog("jsonstring==\(jsonstring)")
-                                let ver = "1.0"
-                                self.checkVersion(ver)
-                            })
+        
+        Alamofire.request(.GET,
+            checkVersionUrl)
+            .response { (request, response, data, error) in
+                print(request)
+                print(response)
+                print(error)
+                
+                if(data!.length == 0 || error != nil){
+                    MTLog("connError==\(error!.localizedDescription)")
+                }else{
+                    do {
+                        if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String:AnyObject] {
+                            MTLog(json)
+                            
+                            if let d = data{
+                                let jsonstring = NSString(data: d, encoding: NSUTF8StringEncoding)! as String
+                                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                    MTLog("jsonstring==\(jsonstring)")
+                                    let ver = "1.2"
+                                    self.checkVersion(ver)
+                                })
+                            }
                         }
+                    } catch let err as NSError {
+                        MTLog(err.localizedDescription)
                     }
-                } catch let error as NSError {
-                    MTLog(error.localizedDescription)
                 }
-            }
         }
     }
     
     
-    func checkVersion(ver:String) -> Bool{
-        
-        let sandboxVersion = NSUserDefaults.standardUserDefaults().objectForKey("CFBundleShortVersionString") as? String ?? ""
+    func checkVersion(ver:String){
         let currentVersion = mainVersion as! String
-                             
-        let version : String
-        if(ver.characters.count > 0){
-            version = ver
-        }else{
-            version = sandboxVersion
-        }
         
-        if version.compare(currentVersion) == NSComparisonResult.OrderedDescending {
-            NSUserDefaults.standardUserDefaults().setObject(currentVersion, forKey: "CFBundleShortVersionString")
+        if ver.compare(currentVersion) == NSComparisonResult.OrderedDescending {
             
             let alertView = UIAlertView()
             alertView.delegate=self
@@ -119,12 +115,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             alertView.addButtonWithTitle("Cancel")
             alertView.addButtonWithTitle("OK")
             alertView.show()
-            
-            return true
         }
-        
-        return false
     }
+
     
     func alertView(alertView:UIAlertView, clickedButtonAtIndex buttonIndex: Int){
         MTLog("buttonIndex==\(buttonIndex) , cancelButtonIndex==\(alertView.cancelButtonIndex)")
