@@ -74,23 +74,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         NSURLConnection.sendAsynchronousRequest(request, queue:NSOperationQueue.mainQueue()) { (response,data,connError) -> Void in
             if(data!.length == 0 || connError != nil){
-                print("connError==\(connError!.localizedDescription)")
+                MTLog("connError==\(connError!.localizedDescription)")
             }else{
                 do {
                     if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String:AnyObject] {
-                        print(json)
+                        MTLog(json)
                         
                         if let d = data{
                             let jsonstring = NSString(data: d, encoding: NSUTF8StringEncoding)! as String
                             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                print("jsonstring==\(jsonstring)")
+                                MTLog("jsonstring==\(jsonstring)")
                                 let ver = "1.0"
                                 self.checkVersion(ver)
                             })
                         }
                     }
                 } catch let error as NSError {
-                    print(error.localizedDescription)
+                    MTLog(error.localizedDescription)
                 }
             }
         }
@@ -100,8 +100,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func checkVersion(ver:String) -> Bool{
         
         let sandboxVersion = NSUserDefaults.standardUserDefaults().objectForKey("CFBundleShortVersionString") as? String ?? ""
-        let currentVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
-        
+        let currentVersion = mainVersion as! String
+                             
         let version : String
         if(ver.characters.count > 0){
             version = ver

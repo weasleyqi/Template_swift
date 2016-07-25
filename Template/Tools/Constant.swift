@@ -15,10 +15,16 @@ import UIKit
  */
 #if PRODUCTION_VERSION  //正式版本
     let server = ""
+    let downloadUrl = ""
+    let checkVersionUrl = ""
 #elseif UAT_VERSION  //UAT版本
     let server = ""
+    let downloadUrl = ""
+    let checkVersionUrl = ""
 #elseif QA_VERSION  //测试版本
     let server = ""
+    let downloadUrl = ""
+    let checkVersionUrl = ""
 #elseif DEV_VERSION  //开发版本
     let server = ""
     let downloadUrl = ""
