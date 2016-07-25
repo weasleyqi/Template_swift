@@ -5,6 +5,9 @@
 //  Created by Weasley Qi on 16/7/19.
 //  Copyright © 2016年 Weasley Qi. All rights reserved.
 //
+// 正式表达式校验（EMail校验，手机号码校验）
+// EmailIsValidated、PhoneNumberIsValidated
+//
 
 import Foundation
 
@@ -12,6 +15,7 @@ enum ValidatedType {
     case Email
     case PhoneNumber
 }
+
 func ValidateText(validatedType type: ValidatedType, validateString: String) -> Bool {
     do {
         let pattern: String
