@@ -33,25 +33,25 @@ import UIKit
 #endif
 
 /// 屏幕宽度
-let screenWidth = UIScreen.mainScreen().bounds.size.width
+let screenWidth :Int = Int(UIScreen.mainScreen().bounds.size.width)
 /// 屏幕高度
-let screenHeight = UIScreen.mainScreen().bounds.size.height
+let screenHeight :Int = Int(UIScreen.mainScreen().bounds.size.height)
 /// app main version
-let mainVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"]
+let mainVersion :String = String(NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"])
 /// app build version
-let buildVersion = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"]
+let buildVersion :String = String(NSBundle.mainBundle().infoDictionary!["CFBundleVersion"])
 /// device name
-let appDisplayName = UIDevice.currentDevice().name
+let appDisplayName :String = String(UIDevice.currentDevice().name)
 /// iOS系统版本
-let iosVersion : NSString = UIDevice.currentDevice().systemVersion
+let iosVersion : String = String(UIDevice.currentDevice().systemVersion)
 /// 设备udid
-let identifierNumber = UIDevice.currentDevice().identifierForVendor
+let identifierNumber :String = String(UIDevice.currentDevice().identifierForVendor)
 /// 设备名称
-let systemName = UIDevice.currentDevice().systemName
+let systemName :String = String(UIDevice.currentDevice().systemName)
 /// 设备型号
-let deviceModel = UIDevice.currentDevice().model
+let deviceModel :String = String(UIDevice.currentDevice().model)
 /// 设备区域化型号 如 A1533
-let deviceLocalizedModel = UIDevice.currentDevice().localizedModel
+let deviceLocalizedModel :String = String(UIDevice.currentDevice().localizedModel)
 
 
 /**

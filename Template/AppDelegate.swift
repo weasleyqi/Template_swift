@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,UIAlertViewDelegate {
 
     var window: UIWindow?
 
@@ -72,8 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //检查更新
     func checkForUpdate(){
         
-        Alamofire.request(.GET,
-            checkVersionUrl)
+        Alamofire.request(.GET, checkVersionUrl)
             .response { (request, response, data, error) in
                 if(data!.length == 0 || error != nil){
                     MTLog("connError==\(error!.localizedDescription)")
@@ -86,8 +85,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                 let jsonstring = NSString(data: d, encoding: NSUTF8StringEncoding)! as String
                                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                     MTLog("jsonstring==\(jsonstring)")
+                                    //TODO 从json中获取服务器端版本号，以下ver需要赋值
                                     let ver = "1.2"
-                                    self.checkVersion(ver)
+                                    
+                                    //compare versions
+                                    if ver.compare(mainVersion) == NSComparisonResult.OrderedDescending {
+                                        let alertView = UIAlertView.init(title: "Update", message: "New version for update", delegate: self, cancelButtonTitle: "Cancel", otherButtonTitles: "OK")
+                                        alertView.show()
+                                    }
                                 })
                             }
                         }
@@ -98,29 +103,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    
-    func checkVersion(ver:String){
-        let currentVersion = mainVersion as! String
-        if ver.compare(currentVersion) == NSComparisonResult.OrderedDescending {
-            
-            let alertView = UIAlertView()
-            alertView.delegate=self
-            alertView.title = "Update"
-            alertView.message = "New version for update"
-            alertView.addButtonWithTitle("Cancel")
-            alertView.addButtonWithTitle("OK")
-            alertView.show()
-        }
-    }
-
-    
     func alertView(alertView:UIAlertView, clickedButtonAtIndex buttonIndex: Int){
-        MTLog("buttonIndex==\(buttonIndex) , cancelButtonIndex==\(alertView.cancelButtonIndex)")
         if(buttonIndex == 1){
             UIApplication.sharedApplication().openURL(NSURL(string: downloadUrl)!)
         }
         else {}
     }
-
+    //检查更新end
 }
 
