@@ -124,10 +124,12 @@ application.registerForRemoteNotifications()
 ```
 >In didRegisterForRemoteNotificationsWithDeviceToken function,get devicetoken,in didFailToRegisterForRemoteNotificationsWithError function, get register error message, in didReceiveRemoteNotification function, handle received messages.
 
-##检查更新 checkForUpdate()
+##Check for Update
+//检查更新 func checkForUpdate()
 1. assigning variables (checkVersionUrl) with a default value 
 2. assigning variables (downloadUrl) with a default value
 3. request for check server version
+
 ```swift
 let request = NSURLRequest(URL: NSURL(string: checkVersionUrl)!)
 NSURLConnection.sendAsynchronousRequest(request, queue:NSOperationQueue.mainQueue()) { (response,data,connError) -> Void in
@@ -140,6 +142,20 @@ self.checkVersion(ver)
 })
 ```
 4. get server version and this function calls the checkVersion() for download
+
+##LocalAuthentication
+```swift 
+//指纹识别
+call LocalAuthentication view controller
+let localAutVC :LocalAutViewController = LocalAutViewController()
+self.presentViewController(localAutVC, animated: true, completion: nil)
+```
+>In LocalAuthentication  func touchIDBtnAction() include validation logic
+add code in  func touchIDBtnAction() 
+
+
+
+
 
 
 

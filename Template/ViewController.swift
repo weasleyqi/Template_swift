@@ -26,6 +26,14 @@ class ViewController: UIViewController {
         
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidDisappear(true)
+        MTLog("调用指纹验证")
+        let localAutVC :LocalAutViewController = LocalAutViewController()
+        self.presentViewController(localAutVC, animated: true, completion: nil)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

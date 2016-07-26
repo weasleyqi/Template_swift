@@ -74,7 +74,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UIAlertViewDelegate {
         
         Alamofire.request(.GET, checkVersionUrl)
             .response { (request, response, data, error) in
-                
                 if(data!.length == 0 || error != nil){
                     MTLog("connError==\(error!.localizedDescription)")
                 }else{

@@ -56,6 +56,10 @@
 		A9F7CF4A1D38874200E24255 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7CF481D38874200E24255 /* Constant.swift */; };
 		A9F7CF4B1D38874200E24255 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7CF481D38874200E24255 /* Constant.swift */; };
 		A9F7CF4C1D38874200E24255 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7CF481D38874200E24255 /* Constant.swift */; };
+		D1DB57BE1D470530009F85D9 /* LocalAutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */; };
+		D1DB57BF1D470530009F85D9 /* LocalAutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */; };
+		D1DB57C01D470530009F85D9 /* LocalAutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */; };
+		D1DB57C11D470530009F85D9 /* LocalAutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -311,6 +315,7 @@
 		A9C4E5A51D3783C50036CD6F /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = "Template/3rd/Kingfisher-2.1.0/Kingfisher.xcodeproj"; sourceTree = "<group>"; };
 		A9C4E5DC1D3787BD0036CD6F /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		A9F7CF481D38874200E24255 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalAutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,6 +386,7 @@
 				A904C2B41D34BCA800EAE86D /* Tools */,
 				A904C2851D349D7D00EAE86D /* AppDelegate.swift */,
 				A904C2871D349D7D00EAE86D /* ViewController.swift */,
+				D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */,
 				A904C2B61D34BD5300EAE86D /* Resources */,
 			);
 			path = Template;
@@ -774,6 +780,7 @@
 				A904C2861D349D7D00EAE86D /* AppDelegate.swift in Sources */,
 				A97A20561D3932AB00D802AB /* BasicTools.swift in Sources */,
 				A9F7CF491D38874200E24255 /* Constant.swift in Sources */,
+				D1DB57BE1D470530009F85D9 /* LocalAutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,6 +793,7 @@
 				A904C29A1D34BB5300EAE86D /* AppDelegate.swift in Sources */,
 				A97A20571D3932AB00D802AB /* BasicTools.swift in Sources */,
 				A9F7CF4A1D38874200E24255 /* Constant.swift in Sources */,
+				D1DB57BF1D470530009F85D9 /* LocalAutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +806,7 @@
 				A904C2A91D34BC8B00EAE86D /* AppDelegate.swift in Sources */,
 				A97A20581D3932AB00D802AB /* BasicTools.swift in Sources */,
 				A9F7CF4B1D38874200E24255 /* Constant.swift in Sources */,
+				D1DB57C01D470530009F85D9 /* LocalAutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,6 +819,7 @@
 				A904C2BA1D34BDAE00EAE86D /* AppDelegate.swift in Sources */,
 				A97A20591D3932AB00D802AB /* BasicTools.swift in Sources */,
 				A9F7CF4C1D38874200E24255 /* Constant.swift in Sources */,
+				D1DB57C11D470530009F85D9 /* LocalAutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
