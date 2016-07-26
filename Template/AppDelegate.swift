@@ -75,10 +75,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Alamofire.request(.GET,
             checkVersionUrl)
             .response { (request, response, data, error) in
-                print(request)
-                print(response)
-                print(error)
-                
                 if(data!.length == 0 || error != nil){
                     MTLog("connError==\(error!.localizedDescription)")
                 }else{
@@ -105,7 +101,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func checkVersion(ver:String){
         let currentVersion = mainVersion as! String
-        
         if ver.compare(currentVersion) == NSComparisonResult.OrderedDescending {
             
             let alertView = UIAlertView()
