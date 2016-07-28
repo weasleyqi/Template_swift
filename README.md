@@ -27,7 +27,12 @@
 - Check For Update
     - XCode7.0+
     - iOS 8.0+
-
+- LocalAuthentication
+    - XCode7.0+
+    - iOS 9.0+
+- 3DTouch
+    - XCode7.0+
+    - iOS 9.0+
 
 ##Multi-Target
 ####you can change the target name to adapt your project.
@@ -153,8 +158,22 @@ self.presentViewController(localAutVC, animated: true, completion: nil)
 >In LocalAuthentication  func touchIDBtnAction() include validation logic
 add code in  func touchIDBtnAction() 
 
+##3DTouch 
+```swift 
+//3DTouch only run on iOS 9.0+
+1. add func configShortCutItems() for configuring UIApplicationShortcutItem
+2. add func for action of shortcutItem
 
+>Test 3D Touch on Simulator in Xcode 7.0 . 
 
+1. git clone https://github.com/DeskConnect/SBShortcutMenuSimulator.git
+    cd SBShortcutMenuSimulator
+    make
+2. The following operation is performed in the SBShortcutMenuSimulator directory 
+    xcrun simctl spawn booted launchctl debug system/com.apple.SpringBoard --environment DYLD_INSERT_LIBRARIES=$PWD/SBShortcutMenuSimulator.dylib
+    xcrun simctl spawn booted launchctl stop com.apple.SpringBoard
+ 3. execute cmd   
+    echo 'your App Bundle ID ' | nc 127.0.0.1 8000
 
 
 
