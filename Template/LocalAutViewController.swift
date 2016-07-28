@@ -24,7 +24,7 @@ class LocalAutViewController: UIViewController{
         
         self.view.backgroundColor = UIColor.whiteColor()
         let touchIDBtn = UIButton()
-        touchIDBtn.frame = CGRectMake(20, 70, screenWidth - 20*2, 50)
+        touchIDBtn.frame = CGRectMake(20, 70, (CGFloat)(screenWidth - 20*2), 50)
         touchIDBtn.backgroundColor = UIColor .redColor()
         touchIDBtn.setTitle("指纹解锁", forState: UIControlState.Normal)
         touchIDBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)

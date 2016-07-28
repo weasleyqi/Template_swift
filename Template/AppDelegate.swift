@@ -24,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UIAlertViewDelegate {
         application.registerUserNotificationSettings(pushNotificationSettings)
         application.registerForRemoteNotifications()
         
+        //iOS 9+ 配置3DTouch
+        if #available (iOS 9.1,*){
+            configShortCutItems()
+        }
+
         //检查更新
         checkForUpdate()
         
@@ -110,5 +115,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UIAlertViewDelegate {
         else {}
     }
     //检查更新end
+    
+    //配置3DTouch
+    @available(iOS 9.1, *)
+    func configShortCutItems(){
+        var shortcutItemArray = [UIApplicationShortcutItem]()
+        //TODO 自定义菜单样式 icon:设置图标 userInfo:参数字典
+        let icon1 = UIApplicationShortcutIcon.init(type: UIApplicationShortcutIconType.Favorite)
+        let userInfo1 : Dictionary<String,String> = ["key1":"value1"];
+        let icon2 = UIApplicationShortcutIcon.init(type: UIApplicationShortcutIconType.Share)
+        let userInfo2 : Dictionary<String,String> = ["key2":"value2"];
+        
+        let ShortcutItem1 = UIApplicationShortcutItem.init(type: "Item1", localizedTitle: "Subject1", localizedSubtitle: "SubTitle1", icon: icon1, userInfo: userInfo1)
+        let ShortcutItem2 = UIApplicationShortcutItem.init(type: "Item2", localizedTitle: "Subject2", localizedSubtitle: "SubTitle2", icon: icon2, userInfo: userInfo2)
+        
+        shortcutItemArray.append(ShortcutItem1)
+        shortcutItemArray.append(ShortcutItem2)
+        UIApplication.sharedApplication().shortcutItems = shortcutItemArray
+    }
+    
+    //Action For ShortcutItem
+    @available(iOS 9, *)
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        
+        switch shortcutItem.type {
+        case "Item1":
+            MTLog("shortcutItem: \(shortcutItem.userInfo)")
+            //TODO 根据shortcutItem的类型 添加处理事件
+
+        case "Item2":
+            MTLog("shortcutItem: \(shortcutItem.userInfo)")
+            //TODO 调用分享视图
+            let items = ["3D Touch Share"]
+            let activityVC = UIActivityViewController(
+                activityItems: items,
+                applicationActivities: nil)
+            self.window?.rootViewController?.presentViewController(activityVC, animated: true, completion: { () -> Void in
+                
+            })
+        default:
+            break
+        }
+    }
+    //配置3DTouch end
+
 }
 
