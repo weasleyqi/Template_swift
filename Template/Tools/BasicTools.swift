@@ -9,7 +9,6 @@
 // null字符串处理
 // Base64加密／解密
 // MD5加密
-// 手机号码校验
 
 import Foundation
 
@@ -101,23 +100,5 @@ extension String{
         }
         result.destroy()
         return String(format: hash as String)
-    }
-}
-
-/**
- 手机号码正则表达式校验
- 
- - parameter num: 手机号码字符串
- 
- - returns: true／false
- */
-func isTelNumber(num:NSString)->Bool {
-    let mobile = "^1\\d{10}$"
-    let regextestmobile = NSPredicate(format: "SELF MATCHES %@",mobile)
-    if (regextestmobile.evaluateWithObject(num) == true) {
-        return true
-    }
-    else {
-        return false
     }
 }
