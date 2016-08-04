@@ -60,6 +60,7 @@
 		D1DB57BF1D470530009F85D9 /* LocalAutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */; };
 		D1DB57C01D470530009F85D9 /* LocalAutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */; };
 		D1DB57C11D470530009F85D9 /* LocalAutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */; };
+		D1FA96341D52DFE300A0A130 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA96331D52DFE300A0A130 /* FileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -316,6 +317,7 @@
 		A9C4E5DC1D3787BD0036CD6F /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		A9F7CF481D38874200E24255 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalAutViewController.swift; sourceTree = "<group>"; };
+		D1FA96331D52DFE300A0A130 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -399,6 +401,7 @@
 				A9F7CF481D38874200E24255 /* Constant.swift */,
 				A97A20551D3932AB00D802AB /* BasicTools.swift */,
 				A97A207B1D3DCD4600D802AB /* AdvancedTools.swift */,
+				D1FA96331D52DFE300A0A130 /* FileManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -778,6 +781,7 @@
 				A904C2881D349D7D00EAE86D /* ViewController.swift in Sources */,
 				A97A207C1D3DCD4600D802AB /* AdvancedTools.swift in Sources */,
 				A904C2861D349D7D00EAE86D /* AppDelegate.swift in Sources */,
+				D1FA96341D52DFE300A0A130 /* FileManager.swift in Sources */,
 				A97A20561D3932AB00D802AB /* BasicTools.swift in Sources */,
 				A9F7CF491D38874200E24255 /* Constant.swift in Sources */,
 				D1DB57BE1D470530009F85D9 /* LocalAutViewController.swift in Sources */,
