@@ -33,6 +33,9 @@
 - 3DTouch
     - XCode7.0+
     - iOS 9.0+
+- FileManager
+    -XCode7.0+
+    -iOS 8.0+ 
 
 ##Multi-Target
 ####you can change the target name to adapt your project.
@@ -174,6 +177,13 @@ add code in  func touchIDBtnAction()
     xcrun simctl spawn booted launchctl stop com.apple.SpringBoard
  3. execute cmd   
     echo 'your App Bundle ID ' | nc 127.0.0.1 8000
+
+##FileManager
+```swift 
+//This class is singleton pattern
+your can invoke class func through this pattern " FileManager.funcName())"
+
+> This class include get dictionary path, create file ,remove file,save data to plist file,save image ,get local image etc.
 
 
 
