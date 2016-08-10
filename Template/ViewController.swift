@@ -8,10 +8,16 @@
 
 import UIKit
 import Kingfisher
+import PullToRefresh
+
+private let PageSize = 20
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var testImage: UIImageView!
+    
+    private var dataSourceCount = PageSize
+    private var tableView:UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,13 +89,25 @@ class ViewController: UIViewController {
         }
         
         MTLog("====Test FileManager End====")
+        
+        //////////////////////////////////////
+        //test PullToRefresh
+         MTLog("====Test PullToRefresh ====")
+        let tbFrame = CGRectMake(0, 200, CGFloat(screenWidth), CGFloat(screenHeight) - 200)
+        tableView = UITableView.init(frame: tbFrame)
+        tableView.dataSource = self
+        tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier:"Cell")
+        tableView.backgroundColor = UIColor.lightGrayColor()
+        self.view.addSubview(tableView)
+        setupPullToRefresh()
+        //end
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidDisappear(true)
         MTLog("调用指纹验证")
-        let localAutVC :LocalAutViewController = LocalAutViewController()
-        self.presentViewController(localAutVC, animated: true, completion: nil)
+        //let localAutVC :LocalAutViewController = LocalAutViewController()
+        //self.presentViewController(localAutVC, animated: true, completion: nil)
         
     }
     
@@ -98,6 +116,41 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
+
+private extension ViewController {
+    
+    func setupPullToRefresh () {
+        tableView.addPullToRefresh(PullToRefresh()) { [weak self] in
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+            dispatch_after(delayTime, dispatch_get_main_queue()) {
+                self?.dataSourceCount = PageSize
+                self?.tableView.endRefreshing(at: .Top)
+            }
+        }
+        
+        tableView.addPullToRefresh(PullToRefresh(position: .Bottom)) { [weak self] in
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+            dispatch_after(delayTime, dispatch_get_main_queue()) {
+                self?.dataSourceCount += PageSize
+                self?.tableView.reloadData()
+                self?.tableView.endRefreshing(at: .Bottom)
+            }
+        }
+    }
+}
+
+extension ViewController:UITableViewDataSource {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSourceCount
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        cell.textLabel?.text = "\(indexPath.row)"
+        return cell
+    }
+}
+
 
