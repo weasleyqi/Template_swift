@@ -56,6 +56,7 @@
 		A9F7CF4A1D38874200E24255 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7CF481D38874200E24255 /* Constant.swift */; };
 		A9F7CF4B1D38874200E24255 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7CF481D38874200E24255 /* Constant.swift */; };
 		A9F7CF4C1D38874200E24255 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7CF481D38874200E24255 /* Constant.swift */; };
+		D15847C31D5B0537008D0EB4 /* PullToRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15847C21D5B052A008D0EB4 /* PullToRefresh.framework */; };
 		D1DB57BE1D470530009F85D9 /* LocalAutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */; };
 		D1DB57BF1D470530009F85D9 /* LocalAutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */; };
 		D1DB57C01D470530009F85D9 /* LocalAutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */; };
@@ -98,34 +99,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
 			remoteInfo = "Alamofire OSX Tests";
-		};
-		A9C4E4CE1D34F3A20036CD6F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9C4E4BA1D34F38A0036CD6F /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		A9C4E57F1D34F4ED0036CD6F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9C4E4BA1D34F38A0036CD6F /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		A9C4E5831D34F5030036CD6F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9C4E4BA1D34F38A0036CD6F /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		A9C4E5871D34F5090036CD6F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9C4E4BA1D34F38A0036CD6F /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
 		};
 		A9C4E5B41D3783C50036CD6F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -211,33 +184,19 @@
 			remoteGlobalIDString = D10EC2311C3D632300A4211C;
 			remoteInfo = "KingfisherTests-OSX";
 		};
-		A9C4E5CE1D3783DD0036CD6F /* PBXContainerItemProxy */ = {
+		D15847BF1D5B052A008D0EB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A9C4E5A51D3783C50036CD6F /* Kingfisher.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D1ED2D341AD2D09F00CFC3EB;
-			remoteInfo = "Kingfisher-iOS";
+			containerPortal = D15847A91D5B052A008D0EB4 /* PullToRefreshDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DDDB19D1B0F7ED700DE9D93;
+			remoteInfo = PullToRefreshDemo;
 		};
-		A9C4E5D21D3783F50036CD6F /* PBXContainerItemProxy */ = {
+		D15847C11D5B052A008D0EB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A9C4E5A51D3783C50036CD6F /* Kingfisher.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D1ED2D341AD2D09F00CFC3EB;
-			remoteInfo = "Kingfisher-iOS";
-		};
-		A9C4E5D61D3783FC0036CD6F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9C4E5A51D3783C50036CD6F /* Kingfisher.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D1ED2D341AD2D09F00CFC3EB;
-			remoteInfo = "Kingfisher-iOS";
-		};
-		A9C4E5DA1D3784020036CD6F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9C4E5A51D3783C50036CD6F /* Kingfisher.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D1ED2D341AD2D09F00CFC3EB;
-			remoteInfo = "Kingfisher-iOS";
+			containerPortal = D15847A91D5B052A008D0EB4 /* PullToRefreshDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DDDB1C71B0F7EE700DE9D93;
+			remoteInfo = PullToRefresh;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -316,6 +275,7 @@
 		A9C4E5A51D3783C50036CD6F /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = "Template/3rd/Kingfisher-2.1.0/Kingfisher.xcodeproj"; sourceTree = "<group>"; };
 		A9C4E5DC1D3787BD0036CD6F /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		A9F7CF481D38874200E24255 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D15847A91D5B052A008D0EB4 /* PullToRefreshDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PullToRefreshDemo.xcodeproj; path = Template/3rd/PullToRefresh/PullToRefreshDemo.xcodeproj; sourceTree = "<group>"; };
 		D1DB57BD1D470530009F85D9 /* LocalAutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalAutViewController.swift; sourceTree = "<group>"; };
 		D1FA96331D52DFE300A0A130 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -325,6 +285,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D15847C31D5B0537008D0EB4 /* PullToRefresh.framework in Frameworks */,
 				A9C4E5CC1D3783DD0036CD6F /* Kingfisher.framework in Frameworks */,
 				A9C4E4CC1D34F3A20036CD6F /* Alamofire.framework in Frameworks */,
 			);
@@ -363,6 +324,7 @@
 		A904C2791D349D7D00EAE86D = {
 			isa = PBXGroup;
 			children = (
+				D15847A91D5B052A008D0EB4 /* PullToRefreshDemo.xcodeproj */,
 				A9C4E5A51D3783C50036CD6F /* Kingfisher.xcodeproj */,
 				A9C4E4BA1D34F38A0036CD6F /* Alamofire.xcodeproj */,
 				A904C2841D349D7D00EAE86D /* Template */,
@@ -478,6 +440,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		D15847AA1D5B052A008D0EB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D15847C01D5B052A008D0EB4 /* PullToRefreshDemo.app */,
+				D15847C21D5B052A008D0EB4 /* PullToRefresh.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -493,8 +464,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A9C4E4CF1D34F3A20036CD6F /* PBXTargetDependency */,
-				A9C4E5CF1D3783DD0036CD6F /* PBXTargetDependency */,
 			);
 			name = Template;
 			productName = Template;
@@ -513,8 +482,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A9C4E5801D34F4ED0036CD6F /* PBXTargetDependency */,
-				A9C4E5D31D3783F50036CD6F /* PBXTargetDependency */,
 			);
 			name = Template_UAT;
 			productName = Template;
@@ -533,8 +500,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A9C4E5841D34F5030036CD6F /* PBXTargetDependency */,
-				A9C4E5D71D3783FC0036CD6F /* PBXTargetDependency */,
 			);
 			name = Template_QA;
 			productName = Template;
@@ -553,8 +518,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A9C4E5881D34F5090036CD6F /* PBXTargetDependency */,
-				A9C4E5DB1D3784020036CD6F /* PBXTargetDependency */,
 			);
 			name = Template_DEV;
 			productName = Template;
@@ -595,6 +558,10 @@
 				{
 					ProductGroup = A9C4E5A61D3783C50036CD6F /* Products */;
 					ProjectRef = A9C4E5A51D3783C50036CD6F /* Kingfisher.xcodeproj */;
+				},
+				{
+					ProductGroup = D15847AA1D5B052A008D0EB4 /* Products */;
+					ProjectRef = D15847A91D5B052A008D0EB4 /* PullToRefreshDemo.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -727,6 +694,20 @@
 			remoteRef = A9C4E5CA1D3783C50036CD6F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		D15847C01D5B052A008D0EB4 /* PullToRefreshDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = PullToRefreshDemo.app;
+			remoteRef = D15847BF1D5B052A008D0EB4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D15847C21D5B052A008D0EB4 /* PullToRefresh.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PullToRefresh.framework;
+			remoteRef = D15847C11D5B052A008D0EB4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -828,49 +809,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A9C4E4CF1D34F3A20036CD6F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = A9C4E4CE1D34F3A20036CD6F /* PBXContainerItemProxy */;
-		};
-		A9C4E5801D34F4ED0036CD6F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = A9C4E57F1D34F4ED0036CD6F /* PBXContainerItemProxy */;
-		};
-		A9C4E5841D34F5030036CD6F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = A9C4E5831D34F5030036CD6F /* PBXContainerItemProxy */;
-		};
-		A9C4E5881D34F5090036CD6F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = A9C4E5871D34F5090036CD6F /* PBXContainerItemProxy */;
-		};
-		A9C4E5CF1D3783DD0036CD6F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Kingfisher-iOS";
-			targetProxy = A9C4E5CE1D3783DD0036CD6F /* PBXContainerItemProxy */;
-		};
-		A9C4E5D31D3783F50036CD6F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Kingfisher-iOS";
-			targetProxy = A9C4E5D21D3783F50036CD6F /* PBXContainerItemProxy */;
-		};
-		A9C4E5D71D3783FC0036CD6F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Kingfisher-iOS";
-			targetProxy = A9C4E5D61D3783FC0036CD6F /* PBXContainerItemProxy */;
-		};
-		A9C4E5DB1D3784020036CD6F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Kingfisher-iOS";
-			targetProxy = A9C4E5DA1D3784020036CD6F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A904C2891D349D7D00EAE86D /* Main.storyboard */ = {
